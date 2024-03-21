@@ -10,7 +10,7 @@ export default function SectionHeading({
 	children?: ReactNode;
 }) {
 	return (
-		<div>
+		<div className='mb-16'>
 			<ShadowHeading>{header}</ShadowHeading>
 			{children && (
 				<Text className='max-w-screen-sm mt-6' color='muted'>
