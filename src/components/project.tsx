@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export function Project({ children }: { children: ReactNode }) {
 	return (
@@ -12,15 +13,20 @@ export function Project({ children }: { children: ReactNode }) {
 export function ProjectImage({
 	src,
 	alt,
+	className,
 }: {
 	src: string | StaticImageData;
 	alt: string;
+	className?: string;
 }) {
 	return (
 		<Image
 			src={src}
 			alt={alt}
-			className='w-full border rounded-lg transition duration-300 h-72 object-cover'
+			className={twMerge(
+				'w-full border rounded-lg transition duration-300 h-72 object-cover',
+				className
+			)}
 		/>
 	);
 }
