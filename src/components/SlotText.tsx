@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const entries = [
 	'Web Developer',
+	'UI/UX Designer',
+	'Programmer',
 	'Student',
 	'Soccer Player',
 	'Puppy Lover',
@@ -13,6 +15,9 @@ const entries = [
 export default function SlotText() {
 	const [index, setIndex] = useState(1);
 	const spinnerRef = useRef<HTMLDivElement>(null);
+	const entryRef = useRef<HTMLSpanElement>(null);
+
+	const MARGIN_BOTTOM = 16;
 
 	const setSpinnerTransition = (value: string) => {
 		if (spinnerRef.current) {
@@ -21,14 +26,20 @@ export default function SlotText() {
 	};
 	const setSpinnerTransform = (value: number) => {
 		if (spinnerRef.current) {
-			spinnerRef.current.style.transform = `translateY(${value}%)`;
+			if (value !== 0) {
+				spinnerRef.current.style.transform = `translateY(${
+					value - index * MARGIN_BOTTOM
+				}px`;
+			} else {
+				spinnerRef.current.style.transform = 'translateY(0)';
+			}
 		}
 	};
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (spinnerRef.current) {
-				setSpinnerTransform(index * -103);
+				setSpinnerTransform(index * -entryRef.current!.clientHeight);
 				setIndex((prev) => (prev + 1) % (entries.length + 1));
 				if (index === entries.length) {
 					setIndex(1);
@@ -50,20 +61,23 @@ export default function SlotText() {
 		return () => clearInterval(interval);
 	}, [index]);
 	return (
-		<div className='inline-flex h-24 overflow-hidden'>
+		<div className='inline-flex h-28 overflow-hidden'>
 			<div
-				className='inline-flex flex-col transition duration-500'
+				className='inline-flex flex-col transition duration-500 [&>span]:mb-4'
 				ref={spinnerRef}
 			>
 				{entries.map((entry, i) => (
 					<span
-						className='bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent'
+						className='bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent drop-shadow-md'
 						key={i}
 					>
 						{entry}
 					</span>
 				))}
-				<span className='bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent'>
+				<span
+					className='bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent drop-shadow-md'
+					ref={entryRef}
+				>
 					{entries[0]}
 				</span>
 			</div>
