@@ -35,6 +35,10 @@ body {
 		rgb(var(--background-start-rgb));
 }
 
+.slide-in {
+	@apply animate-in fade-in slide-in-from-bottom-6 duration-500;
+}
+
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
@@ -47,5 +51,22 @@ body {
 	}
 	100% {
 		transform: translateY(-100%);
+	}
+}
+
+@keyframes swipeLeft {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@keyframes swipeRight {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
 	}
 }
