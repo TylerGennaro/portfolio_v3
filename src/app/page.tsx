@@ -22,6 +22,8 @@ import { Github } from 'lucide-react';
 import Image from 'next/image';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import SlotText from '@/components/SlotText';
+import Skill from '@/components/Skill';
+import Banner from '@/components/Banner';
 
 export const metadata: Metadata = {
 	title: 'Portfolio - Tyler Gennaro',
@@ -29,25 +31,31 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+	const BANNER_SPEED = 30;
+
 	return (
 		<main className='max-w-screen-xl mx-auto mb-40'>
-			<section className='h-[100vh] pt-[25vh] px-8'>
-				<div>
+			<section className='min-h-screen flex items-center px-8 pb-32 pt-16'>
+				<div className='w-full'>
 					<div className='flex items-center justify-between'>
 						<div>
-							<Text size='xl'>Hey, I&apos;m Tyler</Text>
-							<div className='text-7xl font-bold leading-snug'>
+							<Text size='xl' className='slide-in'>
+								Hey, I&apos;m Tyler
+							</Text>
+							<div className='text-7xl font-bold leading-snug slide-in delay-75'>
 								I am a <SlotText />
 							</div>
 						</div>
-						<div className='relative'>
+						<div className='relative slide-in delay-150'>
 							<div className='bg-primary dark:bg-secondary absolute inset-0 -z-[1] blur-[60px] opacity-50' />
 							<Image src={logo} alt='Logo' className='w-28 aspect-square' />
 						</div>
 					</div>
 					<div className='mt-12 space-x-4'>
-						<Button>Contact Me</Button>
-						<Button variant='outline'>Projects</Button>
+						<Button className='slide-in delay-200'>Contact Me</Button>
+						<Button className='slide-in delay-300' variant='outline'>
+							Projects
+						</Button>
 					</div>
 				</div>
 			</section>
@@ -61,7 +69,7 @@ export default function Home() {
 						/>
 					</div>
 					<ShadowHeading color='light'>About Me</ShadowHeading>
-					<Text className='max-w-screen-sm mt-4' color='lmuted'>
+					<Text className='max-w-screen-sm mt-8' color='lmuted'>
 						I am a student at Monmouth University in West Long Branch, NJ
 						expected to graduate in May 2024. I am pursuing a Bachelor&apos;s of
 						Science in Computer Science. I have <b>five</b> years experience in
@@ -82,14 +90,23 @@ export default function Home() {
 					</Text>
 				</div>
 			</section>
-			<section className='px-8 mt-72'>
+			<section className='px-8 mt-64'>
 				<SectionHeading header='Projects'>
 					A list of my projects from the last two years. Each project showcases
 					both front- and back-end stacks.
 				</SectionHeading>
-				<div className='grid grid-cols-2 mt-8 gap-8'>
+				<div className='grid grid-cols-2 gap-8'>
 					<Project>
-						<ProjectImage src={pulsateLight} alt='Pulsate' />
+						<ProjectImage
+							src={pulsateLight}
+							alt='Pulsate'
+							className='dark:hidden'
+						/>
+						<ProjectImage
+							src={pulsateDark}
+							alt='Pulsate'
+							className='hidden dark:block'
+						/>
 						<ProjectTitle>Pulsate</ProjectTitle>
 						<ProjectDescription>
 							Inventory management application
@@ -107,7 +124,16 @@ export default function Home() {
 						</ProjectTools>
 					</Project>
 					<Project>
-						<ProjectImage src={devslistLight} alt='DevsList' />
+						<ProjectImage
+							src={devslistLight}
+							alt='DevsList'
+							className='dark:hidden'
+						/>
+						<ProjectImage
+							src={devslistDark}
+							alt='DevsList'
+							className='hidden dark:block'
+						/>
 						<ProjectTitle>DevsList</ProjectTitle>
 						<ProjectDescription>
 							Recruitment platform for developers
@@ -162,11 +188,46 @@ export default function Home() {
 					</a>
 				</div>
 			</section>
-			<section className='px-8 mt-72'>
+			<section className='px-8 mt-64'>
 				<SectionHeading header='Skills'>
 					Languages, frameworks, technologies, and tools that I have hands-on
 					experience with. Some skills were utilized in the projects above.
 				</SectionHeading>
+				<div className='grid grid-cols-3 gap-4'>
+					<Skill label='TypeScript' skill='typescript' big />
+					<Skill label='Next.js' skill='nextjs' big />
+					<Skill label='HTML/CSS' skill='html' big />
+				</div>
+				<Banner
+					className='mt-8'
+					items={[
+						{ label: 'React.js', skill: 'reactjs' },
+						{ label: 'Node.js', skill: 'nodejs' },
+						{ label: 'Express.js', skill: 'expressjs' },
+						{ label: 'JavaScript', skill: 'javascript' },
+						{ label: 'Java', skill: 'java' },
+						{ label: 'Lua', skill: 'lua' },
+						{ label: 'TailwindCSS', skill: 'tailwindcss' },
+						{ label: 'Sass', skill: 'sass' },
+					]}
+					speed={BANNER_SPEED}
+					direction='right'
+				/>
+				<Banner
+					className='mt-4'
+					items={[
+						{ label: 'MySQL', skill: 'mysql' },
+						{ label: 'PostgreSQL', skill: 'postgresql' },
+						{ label: 'Prisma', skill: 'prisma' },
+						{ label: 'Drizzle', skill: 'drizzle' },
+						{ label: 'Figma', skill: 'figma' },
+						{ label: 'Github', skill: 'github' },
+						{ label: 'VS Code', skill: 'vscode' },
+						{ label: 'Vercel', skill: 'vercel' },
+					]}
+					speed={BANNER_SPEED}
+					direction='left'
+				/>
 			</section>
 		</main>
 	);
