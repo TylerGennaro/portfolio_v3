@@ -22,7 +22,7 @@ export default function Header() {
 	return (
 		<header
 			className={twMerge(
-				'sticky top-0 z-10 bg-background transition',
+				'sticky top-0 z-50 bg-background transition',
 				isScrolled && 'border-b shadow-md'
 			)}
 		>
