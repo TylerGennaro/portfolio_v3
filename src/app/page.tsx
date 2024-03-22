@@ -1,6 +1,9 @@
+import Banner from '@/components/Banner';
 import { Button } from '@/components/Button';
 import SectionHeading from '@/components/SectionHeading';
 import { ShadowHeading } from '@/components/ShadowHeading';
+import Skill from '@/components/Skill';
+import SlotText from '@/components/SlotText';
 import { Text } from '@/components/Text';
 import {
 	Project,
@@ -10,20 +13,16 @@ import {
 	ProjectTool,
 	ProjectTools,
 } from '@/components/project';
+import { Box, Github, Mail } from 'lucide-react';
 import { Metadata } from 'next';
-import pulsateLight from '../../public/pulsate-light.png';
-import pulsateDark from '../../public/pulsate-dark.png';
-import devslistLight from '../../public/devslist-light.png';
-import devslistDark from '../../public/devslist-dark.png';
+import Image from 'next/image';
 import commonwealth from '../../public/commonwealth.jpg';
 import coursehawk from '../../public/coursehawk.png';
+import devslistDark from '../../public/devslist-dark.png';
+import devslistLight from '../../public/devslist-light.png';
 import logo from '../../public/logo.svg';
-import { Github } from 'lucide-react';
-import Image from 'next/image';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import SlotText from '@/components/SlotText';
-import Skill from '@/components/Skill';
-import Banner from '@/components/Banner';
+import pulsateDark from '../../public/pulsate-dark.png';
+import pulsateLight from '../../public/pulsate-light.png';
 
 export const metadata: Metadata = {
 	title: 'Portfolio - Tyler Gennaro',
@@ -31,31 +30,53 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	const BANNER_SPEED = 30;
+	const BANNER_SPEED = 45;
 
 	return (
-		<main className='max-w-screen-xl mx-auto mb-40'>
-			<section className='min-h-screen flex items-center px-8 pb-32 pt-16'>
+		<main className='max-w-screen-xl mx-auto'>
+			<section className='min-h-screen flex items-center px-8 pb-32 md:pt-16'>
 				<div className='w-full'>
-					<div className='flex items-center justify-between'>
-						<div>
+					<div className='flex items-center justify-between flex-wrap-reverse gap-16'>
+						<div className='hidden sm:block'>
 							<Text size='xl' className='slide-in'>
 								Hey, I&apos;m Tyler
 							</Text>
-							<div className='text-7xl font-bold leading-snug slide-in delay-75'>
+							<div className='text-4xl sm:text-5xl lg:text-7xl font-bold !leading-snug slide-in delay-75'>
 								I am a <SlotText />
 							</div>
 						</div>
+						<div className='sm:hidden'>
+							<Text size='xl' className='slide-in'>
+								Hey, I&apos;m Tyler, I am
+							</Text>
+							<div className='text-4xl sm:text-5xl lg:text-7xl font-bold !leading-snug slide-in delay-75'>
+								a <SlotText />
+							</div>
+						</div>
 						<div className='relative slide-in delay-150'>
-							<div className='bg-primary dark:bg-secondary absolute inset-0 -z-[1] blur-[60px] opacity-50' />
-							<Image src={logo} alt='Logo' className='w-28 aspect-square' />
+							<div className='bg-primary dark:bg-secondary absolute inset-0 -z-[1] blur-[60px] opacity-50 scale-in' />
+							<Image
+								src={logo}
+								alt='Logo'
+								className='w-20 md:w-28 aspect-square'
+							/>
 						</div>
 					</div>
 					<div className='mt-12 space-x-4'>
-						<Button className='slide-in delay-200'>Contact Me</Button>
-						<Button className='slide-in delay-300' variant='outline'>
-							Projects
-						</Button>
+						<a href='mailto:tylergennaro10@gmail.com'>
+							<Button className='slide-in [animation-delay:_200ms]' icon={Mail}>
+								Contact Me
+							</Button>
+						</a>
+						<a href='#projects'>
+							<Button
+								className='slide-in [animation-delay:_250ms]'
+								variant='outline'
+								icon={Box}
+							>
+								Projects
+							</Button>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -77,9 +98,9 @@ export default function Home() {
 						frameworks such as React.js.
 						<br />
 						<br />I am seeking an entry-level software development position to
-						utilize problem-solving and collaborative skills to drive company
+						utilize my problem-solving and collaborative skills to drive company
 						success. I am passionate about web development and am eager to
-						continue learning and growing.
+						continue to learn and grow.
 						<br />
 						<br />
 						If you&apos;re interested in my work, please reach out to me at{' '}
@@ -90,13 +111,13 @@ export default function Home() {
 					</Text>
 				</div>
 			</section>
-			<section className='px-8 mt-64'>
+			<section className='px-8 mt-64 scroll-m-24' id='projects'>
 				<SectionHeading header='Projects'>
 					A list of my projects from the last two years. Each project showcases
 					both front- and back-end stacks.
 				</SectionHeading>
-				<div className='grid grid-cols-2 gap-8'>
-					<Project>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+					<Project href='https://github.com/TGennnaro/pulsate'>
 						<ProjectImage
 							src={pulsateLight}
 							alt='Pulsate'
@@ -123,7 +144,7 @@ export default function Home() {
 							<ProjectTool>Stripe</ProjectTool>
 						</ProjectTools>
 					</Project>
-					<Project>
+					<Project href='https://github.com/TGennnaro/devslist'>
 						<ProjectImage
 							src={devslistLight}
 							alt='DevsList'
@@ -149,7 +170,7 @@ export default function Home() {
 							<ProjectTool>React Query</ProjectTool>
 						</ProjectTools>
 					</Project>
-					<Project>
+					<Project href='https://github.com/TGennnaro/common-metal'>
 						<ProjectImage src={commonwealth} alt='Commonwealth Metal' />
 						<ProjectTitle>Commonwealth Metal Company</ProjectTitle>
 						<ProjectDescription>Company website</ProjectDescription>
@@ -160,7 +181,7 @@ export default function Home() {
 							<ProjectTool>ShadcnUI</ProjectTool>
 						</ProjectTools>
 					</Project>
-					<Project>
+					<Project href='https://github.com/TGennnaro/CourseHawk'>
 						<ProjectImage src={coursehawk} alt='CourseHawk' />
 						<ProjectTitle>CourseHawk</ProjectTitle>
 						<ProjectDescription>
@@ -193,7 +214,7 @@ export default function Home() {
 					Languages, frameworks, technologies, and tools that I have hands-on
 					experience with. Some skills were utilized in the projects above.
 				</SectionHeading>
-				<div className='grid grid-cols-3 gap-4'>
+				<div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
 					<Skill label='TypeScript' skill='typescript' big />
 					<Skill label='Next.js' skill='nextjs' big />
 					<Skill label='HTML/CSS' skill='html' big />
@@ -203,7 +224,7 @@ export default function Home() {
 					items={[
 						{ label: 'React.js', skill: 'reactjs' },
 						{ label: 'Node.js', skill: 'nodejs' },
-						{ label: 'Express.js', skill: 'expressjs' },
+						{ label: 'Express.js', skill: 'expressjs', hasDark: true },
 						{ label: 'JavaScript', skill: 'javascript' },
 						{ label: 'Java', skill: 'java' },
 						{ label: 'Lua', skill: 'lua' },
@@ -218,17 +239,31 @@ export default function Home() {
 					items={[
 						{ label: 'MySQL', skill: 'mysql' },
 						{ label: 'PostgreSQL', skill: 'postgresql' },
-						{ label: 'Prisma', skill: 'prisma' },
+						{ label: 'Prisma', skill: 'prisma', hasDark: true },
 						{ label: 'Drizzle', skill: 'drizzle' },
 						{ label: 'Figma', skill: 'figma' },
-						{ label: 'Github', skill: 'github' },
+						{ label: 'Github', skill: 'github', hasDark: true },
 						{ label: 'VS Code', skill: 'vscode' },
-						{ label: 'Vercel', skill: 'vercel' },
+						{ label: 'Vercel', skill: 'vercel', hasDark: true },
 					]}
 					speed={BANNER_SPEED}
 					direction='left'
 				/>
 			</section>
+			<footer className='mt-32 mb-8'>
+				<div className='bg-[linear-gradient(to_right,_var(--primary),_#18A4B9,_#3068D4_40%,_var(--secondary))] py-4 xl:rounded-lg flex flex-col items-center gap-4 shadow-lg'>
+					<Text color='light'>
+						Powered by Me © {new Date().getFullYear()} •{' '}
+						<a
+							className='underline'
+							href='https://github.com/TGennnaro/portfolio_v3'
+							target='_blank'
+						>
+							Source Code
+						</a>
+					</Text>
+				</div>
+			</footer>
 		</main>
 	);
 }
