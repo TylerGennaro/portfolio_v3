@@ -2,11 +2,19 @@ import Image, { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export function Project({ children }: { children: ReactNode }) {
+export function Project({
+	children,
+	href,
+}: {
+	children: ReactNode;
+	href?: string;
+}) {
 	return (
-		<div className='w-full p-4 border rounded-lg shadow-md hover:bg-background-light [&:hover>img]:scale-[1.01] transition duration-300 cursor-pointer'>
-			{children}
-		</div>
+		<a href={href} target='_blank'>
+			<div className='w-full p-4 border rounded-lg shadow-md hover:bg-background-light [&:hover>img]:scale-[1.01] transition duration-300 cursor-pointer'>
+				{children}
+			</div>
+		</a>
 	);
 }
 
