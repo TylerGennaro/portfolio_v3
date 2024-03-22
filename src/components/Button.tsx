@@ -9,7 +9,7 @@ const button = tv({
 		variant: {
 			primary:
 				'bg-primary text-white hover:brightness-125 transition duration-300',
-			outline: 'bg-transparent border hover:bg-content transition duration-300',
+			outline: 'bg-background border hover:bg-content transition duration-300',
 			light:
 				'bg-transparent border border-white text-white hover:bg-white hover:text-primary transition duration-300',
 			icon: 'bg-transparent border hover:bg-content transition duration-300 p-2 shadow-none',
