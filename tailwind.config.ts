@@ -33,11 +33,23 @@ const config: Config = {
 			},
 			animation: {
 				rotate: 'rotate 30s linear infinite',
+				'meteor-effect': 'meteor 5s linear infinite',
 			},
 			keyframes: {
 				rotate: {
 					to: {
 						rotate: '360deg',
+					},
+				},
+				meteor: {
+					'0%': {
+						transform: 'rotate(var(--rotation)) translateX(0)',
+						opacity: '0',
+					},
+					'70%': { opacity: '1' },
+					'100%': {
+						transform: 'rotate(var(--rotation)) translateX(-500px)',
+						opacity: '0',
 					},
 				},
 			},

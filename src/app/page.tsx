@@ -24,6 +24,7 @@ import logo from '../../public/logo.svg';
 import pulsateDark from '../../public/pulsate-dark.png';
 import pulsateLight from '../../public/pulsate-light.png';
 import vortex from '../../public/vortex.svg';
+import Meteors from '@/components/Meteors';
 
 export const metadata: Metadata = {
 	title: 'Portfolio - Tyler Gennaro',
@@ -35,6 +36,7 @@ export default function Home() {
 
 	return (
 		<main className='max-w-screen-xl mx-auto'>
+			<Meteors number={40} />
 			<section className='min-h-screen flex items-center px-4 sm:px-8 pb-32 md:pt-16'>
 				<div className='w-full'>
 					<div className='flex items-center justify-between flex-wrap-reverse gap-16'>
