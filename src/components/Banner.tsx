@@ -15,8 +15,8 @@ export default function Banner({
 }) {
 	const animation =
 		direction === 'right'
-			? 'animate-[swipeRight_var(--speed)_linear_infinite_backwards]'
-			: 'animate-[swipeLeft_var(--speed)_linear_infinite]';
+			? 'motion-safe:animate-[swipeRight_var(--speed)_linear_infinite_backwards]'
+			: 'motion-safe:animate-[swipeLeft_var(--speed)_linear_infinite]';
 	return (
 		<div className={twMerge('relative w-full overflow-hidden', className)}>
 			<div className='absolute inset-0 bg-[linear-gradient(to_right,_var(--background),_transparent_15%,_transparent_85%,_var(--background))] z-[10] pointer-events-none' />
