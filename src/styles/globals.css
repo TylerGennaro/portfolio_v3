@@ -25,6 +25,10 @@
 	}
 }
 
+* {
+	scroll-behavior: smooth;
+}
+
 body {
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(
@@ -37,6 +41,10 @@ body {
 
 .slide-in {
 	@apply animate-in fade-in slide-in-from-bottom-6 duration-500;
+}
+
+.scale-in {
+	animation: scaleIn 400ms ease;
 }
 
 @layer utilities {
@@ -68,5 +76,14 @@ body {
 	}
 	100% {
 		transform: translateX(0%);
+	}
+}
+
+@keyframes scaleIn {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
 	}
 }
