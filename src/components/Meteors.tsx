@@ -9,7 +9,7 @@ export default function Meteors({ number }: { number?: number }) {
 	const meteors = Array.from({ length: number ?? 20 }).fill(true);
 
 	return (
-		<div className='absolute inset-0 overflow-hidden pointer-events-none'>
+		<div className='motion-reduce:hidden absolute inset-0 overflow-hidden pointer-events-none'>
 			{meteors.map((_, i) => (
 				<span
 					key={'meteor' + i}
