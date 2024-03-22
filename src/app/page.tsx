@@ -35,7 +35,7 @@ export default function Home() {
 
 	return (
 		<main className='max-w-screen-xl mx-auto'>
-			<section className='min-h-screen flex items-center px-8 pb-32 md:pt-16'>
+			<section className='min-h-screen flex items-center px-4 sm:px-8 pb-32 md:pt-16'>
 				<div className='w-full'>
 					<div className='flex items-center justify-between flex-wrap-reverse gap-16'>
 						<div className='hidden sm:block'>
@@ -63,7 +63,7 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className='mt-12 space-x-4'>
+					<div className='mt-12 flex items-center flex-wrap gap-4'>
 						<a href='mailto:tylergennaro10@gmail.com'>
 							<Button className='slide-in [animation-delay:_200ms]' icon={Mail}>
 								Contact Me
