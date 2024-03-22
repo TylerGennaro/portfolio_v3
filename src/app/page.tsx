@@ -23,6 +23,7 @@ import devslistLight from '../../public/devslist-light.png';
 import logo from '../../public/logo.svg';
 import pulsateDark from '../../public/pulsate-dark.png';
 import pulsateLight from '../../public/pulsate-light.png';
+import vortex from '../../public/vortex.svg';
 
 export const metadata: Metadata = {
 	title: 'Portfolio - Tyler Gennaro',
@@ -83,11 +84,7 @@ export default function Home() {
 			<section className='px-0 xl:px-8'>
 				<div className='w-full bg-gradient-to-r from-primary to-secondary xl:rounded-lg px-16 py-32 relative shadow-lg overflow-hidden'>
 					<div className='absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2'>
-						<img
-							src='vortex.svg'
-							alt=''
-							className='motion-safe:animate-rotate'
-						/>
+						<Image src={vortex} alt='' className='motion-safe:animate-rotate' />
 					</div>
 					<ShadowHeading color='light'>About Me</ShadowHeading>
 					<Text className='max-w-screen-sm mt-8' color='lmuted'>
