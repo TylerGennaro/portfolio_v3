@@ -2,11 +2,11 @@ import { twMerge } from 'tailwind-merge';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 const text = tv({
-	base: 'text-lg text-foreground',
+	base: 'text-base lg:text-lg text-foreground',
 	variants: {
 		size: {
-			lg: 'text-5xl font-semibold leading-snug',
-			xl: 'text-7xl font-bold leading-snug',
+			lg: 'text-2xl sm:text-3xl lg:text-5xl font-semibold leading-snug',
+			xl: 'text-4xl sm:text-5xl lg:text-7xl font-bold leading-snug',
 		},
 		color: {
 			light: 'text-white',
