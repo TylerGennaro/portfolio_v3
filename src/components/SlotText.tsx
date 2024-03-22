@@ -14,6 +14,7 @@ const entries = [
 
 export default function SlotText() {
 	const [index, setIndex] = useState(1);
+	const [isSmall, setIsSmall] = useState(false); // Used to fix bad positioning on small screens
 	const spinnerRef = useRef<HTMLDivElement>(null);
 	const entryRef = useRef<HTMLSpanElement>(null);
 
@@ -28,7 +29,7 @@ export default function SlotText() {
 		if (spinnerRef.current) {
 			if (value !== 0) {
 				spinnerRef.current.style.transform = `translateY(${
-					value - index * MARGIN_BOTTOM
+					value - index * (MARGIN_BOTTOM - (isSmall ? 0.5 : 0)) // fixes inconsistent pos on small screens
 				}px`;
 			} else {
 				spinnerRef.current.style.transform = 'translateY(0)';
@@ -37,9 +38,17 @@ export default function SlotText() {
 	};
 
 	useEffect(() => {
+		const handleResize = () => {
+			setIsSmall(window.innerWidth < 640);
+		};
+		window.addEventListener('resize', handleResize);
+		setIsSmall(window.innerWidth < 640);
+
 		const interval = setInterval(() => {
 			if (spinnerRef.current) {
-				setSpinnerTransform(index * -entryRef.current!.clientHeight);
+				setSpinnerTransform(
+					index * -Math.round(entryRef.current!.clientHeight)
+				);
 				setIndex((prev) => (prev + 1) % (entries.length + 1));
 				if (index === entries.length) {
 					setIndex(1);
@@ -58,10 +67,13 @@ export default function SlotText() {
 				}
 			}
 		}, 4000);
-		return () => clearInterval(interval);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+			clearInterval(interval);
+		};
 	}, [index]);
 	return (
-		<div className='inline-flex h-28 overflow-hidden'>
+		<div className='inline-flex h-16 lg:h-28 overflow-hidden'>
 			<div
 				className='inline-flex flex-col transition duration-500 [&>span]:mb-4'
 				ref={spinnerRef}
