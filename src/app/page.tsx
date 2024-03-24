@@ -13,7 +13,7 @@ import {
 	ProjectTool,
 	ProjectTools,
 } from '@/components/project';
-import { Box, Github, Mail } from 'lucide-react';
+import { Box, Github, Linkedin, Mail } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import commonwealth from '../../public/commonwealth.jpg';
@@ -65,10 +65,16 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className='mt-12 flex items-center flex-wrap gap-4'>
-						<a href='mailto:tylergennaro10@gmail.com'>
-							<Button className='slide-in [animation-delay:_200ms]' icon={Mail}>
-								Contact Me
+					<div className='mt-8 flex items-center flex-wrap gap-4'>
+						<a
+							href='https://www.linkedin.com/in/tyler-gennaro/'
+							target='_blank'
+						>
+							<Button
+								className='slide-in [animation-delay:_200ms]'
+								icon={Linkedin}
+							>
+								LinkedIn
 							</Button>
 						</a>
 						<a href='#projects'>
