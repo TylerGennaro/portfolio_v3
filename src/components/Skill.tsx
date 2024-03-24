@@ -26,7 +26,7 @@ export default function Skill({
 				width={big ? 72 : 48}
 				height={big ? 72 : 48}
 				className={twMerge(
-					'fill-foreground object-contain',
+					'fill-foreground object-contain w-auto',
 					big ? 'h-12 md:h-[72px]' : 'h-8 md:h-12',
 					hasDark ? 'dark:hidden block' : ''
 				)}
@@ -38,7 +38,7 @@ export default function Skill({
 					width={big ? 72 : 48}
 					height={big ? 72 : 48}
 					className={twMerge(
-						'dark:block hidden fill-foreground object-contain',
+						'dark:block hidden fill-foreground object-contain w-auto',
 						big ? 'h-12 md:h-[72px]' : 'h-8 md:h-12'
 					)}
 				/>
