@@ -33,17 +33,21 @@ export default function Header() {
 					className='w-10 aspect-square shadow-lg rounded-full'
 				/>
 				<div className='flex gap-2 items-center'>
-					<a href='https://www.linkedin.com/in/tyler-gennaro/' target='_blank'>
+					<a
+						href='https://www.linkedin.com/in/tyler-gennaro/'
+						target='_blank'
+						title='LinkedIn'
+					>
 						<Button variant='icon'>
 							<Linkedin />
 						</Button>
 					</a>
-					<a href='https://github.com/TGennnaro' target='_blank'>
+					<a href='https://github.com/TGennnaro' target='_blank' title='GitHub'>
 						<Button variant='icon'>
 							<Github />
 						</Button>
 					</a>
-					<a href='mailto:tylergennaro10@gmail.com'>
+					<a href='mailto:tylergennaro10@gmail.com' title='Email'>
 						<Button variant='icon'>
 							<Mail />
 						</Button>
