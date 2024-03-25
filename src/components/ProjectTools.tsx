@@ -18,6 +18,7 @@ export default function ProjectTools({ children }: { children: ReactNode }) {
 						className='text-sm px-6 py-1'
 						icon={Plus}
 						onClick={() => setShowAll(true)}
+						variant='muted'
 					>
 						See {childrenArr.length - 3} more
 					</Button>
