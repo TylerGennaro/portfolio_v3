@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { Button } from './Button';
+import { Github } from 'lucide-react';
 
 export function Project({
 	children,
@@ -10,11 +12,18 @@ export function Project({
 	href?: string;
 }) {
 	return (
-		<a href={href} target='_blank'>
-			<div className='w-full p-4 border rounded-lg shadow-md hover:bg-background-light [&:hover>img]:scale-[1.01] transition duration-300 cursor-pointer'>
-				{children}
-			</div>
-		</a>
+		<div className='w-full h-full p-4 border rounded-lg shadow-md [&:hover>img]:scale-[1.01] transition duration-300 flex flex-col justify-between'>
+			<div>{children}</div>
+			<a href={href} target='_blank' className='mt-8'>
+				<Button
+					className='w-full justify-center'
+					variant='outline'
+					icon={Github}
+				>
+					View on Github
+				</Button>
+			</a>
+		</div>
 	);
 }
 
@@ -47,10 +56,6 @@ export function ProjectTitle({ children }: { children: ReactNode }) {
 
 export function ProjectDescription({ children }: { children: ReactNode }) {
 	return <p className='text-lg mt-2 text-foreground-muted'>{children}</p>;
-}
-
-export function ProjectTools({ children }: { children: ReactNode }) {
-	return <ul className='flex flex-wrap gap-2 mt-8'>{children}</ul>;
 }
 
 export function ProjectTool({ children }: { children: ReactNode }) {
