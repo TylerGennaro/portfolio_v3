@@ -8,12 +8,15 @@ import Header from '@/components/Header';
 const inter = Inter({ subsets: ['latin'] });
 const openSans = Open_Sans({ subsets: ['latin'] });
 
+const description =
+	'My name is Tyler, I am a full-stack web developer currently pursuing a B.S. in Computer Science and expected to graduate in May 2024. I have a passion for creating and developing web applications that are both functional and visually appealing.';
+
 export const metadata: Metadata = {
 	title: 'Portfolio - Tyler Gennaro',
-	description: 'My personal portfolio.',
+	description,
 	openGraph: {
 		title: 'Portfolio - Tyler Gennaro',
-		description: 'My personal portfolio.',
+		description,
 		type: 'website',
 		locale: 'en_US',
 		url: 'https://tgennaro.com',
