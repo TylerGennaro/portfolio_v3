@@ -22,7 +22,10 @@ export default function Projects() {
 				both front- and back-end stacks.
 			</SectionHeading>
 			<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-				<Project href='https://github.com/TGennnaro/pulsate'>
+				<Project
+					liveHref='https://pulsate.cloud'
+					githubHref='https://github.com/TGennnaro/pulsate'
+				>
 					<ProjectImage
 						src={pulsateLight}
 						alt='Pulsate'
@@ -49,7 +52,10 @@ export default function Projects() {
 						<ProjectTool>Stripe</ProjectTool>
 					</ProjectTools>
 				</Project>
-				<Project href='https://github.com/TGennnaro/devslist'>
+				<Project
+					liveHref='https://devslist.vercel.app'
+					githubHref='https://github.com/TGennnaro/devslist'
+				>
 					<ProjectImage
 						src={devslistLight}
 						alt='DevsList'
@@ -75,7 +81,10 @@ export default function Projects() {
 						<ProjectTool>React Query</ProjectTool>
 					</ProjectTools>
 				</Project>
-				<Project href='https://github.com/TGennnaro/common-metal'>
+				<Project
+					liveHref='https://commonwealthmetal.com'
+					githubHref='https://github.com/TGennnaro/common-metal'
+				>
 					<ProjectImage src={commonwealth} alt='Commonwealth Metal' />
 					<ProjectTitle>Commonwealth Metal Company</ProjectTitle>
 					<ProjectDescription>Company website</ProjectDescription>
@@ -86,7 +95,10 @@ export default function Projects() {
 						<ProjectTool>ShadcnUI</ProjectTool>
 					</ProjectTools>
 				</Project>
-				<Project href='https://github.com/TGennnaro/CourseHawk'>
+				<Project
+					liveHref='https://coursehawk.vercel.app'
+					githubHref='https://github.com/TGennnaro/CourseHawk'
+				>
 					<ProjectImage src={coursehawk} alt='CourseHawk' />
 					<ProjectTitle>CourseHawk</ProjectTitle>
 					<ProjectDescription>

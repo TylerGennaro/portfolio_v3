@@ -2,23 +2,36 @@ import Image, { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Button } from './Button';
-import { Github } from 'lucide-react';
+import { Github, Radio } from 'lucide-react';
 
 export function Project({
 	children,
-	href,
+	liveHref,
+	githubHref,
 }: {
 	children: ReactNode;
-	href?: string;
+	liveHref?: string;
+	githubHref?: string;
 }) {
 	return (
 		<div className='w-full h-full p-4 border rounded-lg shadow-md [&:hover>img]:scale-[1.01] transition duration-300 flex flex-col justify-between'>
 			<div>{children}</div>
-			<a href={href} target='_blank' className='mt-8'>
-				<Button className='w-full justify-center' icon={Github}>
-					View on Github
-				</Button>
-			</a>
+			<div className='flex gap-4 w-full'>
+				<a href={liveHref} target='_blank' className='mt-8 w-full'>
+					<Button className='w-full justify-center' icon={Radio}>
+						Live Site
+					</Button>
+				</a>
+				<a href={githubHref} target='_blank' className='mt-8 w-full'>
+					<Button
+						variant='muted'
+						className='w-full justify-center'
+						icon={Github}
+					>
+						View on Github
+					</Button>
+				</a>
+			</div>
 		</div>
 	);
 }
