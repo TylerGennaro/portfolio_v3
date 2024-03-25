@@ -15,11 +15,7 @@ export function Project({
 		<div className='w-full h-full p-4 border rounded-lg shadow-md [&:hover>img]:scale-[1.01] transition duration-300 flex flex-col justify-between'>
 			<div>{children}</div>
 			<a href={href} target='_blank' className='mt-8'>
-				<Button
-					className='w-full justify-center'
-					variant='outline'
-					icon={Github}
-				>
+				<Button className='w-full justify-center' icon={Github}>
 					View on Github
 				</Button>
 			</a>
