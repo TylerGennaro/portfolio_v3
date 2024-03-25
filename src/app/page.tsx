@@ -9,11 +9,6 @@ import SeeMore from '@/components/sections/SeeMore';
 import Skills from '@/components/sections/Skills';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'Portfolio - Tyler Gennaro',
-	description: 'My personal portfolio.',
-};
-
 export default function Home() {
 	return (
 		<main className='max-w-screen-xl mx-auto'>
