@@ -16,13 +16,13 @@ export function Project({
 	return (
 		<div className='w-full h-full p-4 border rounded-lg shadow-md [&:hover>img]:scale-[1.01] transition duration-300 flex flex-col justify-between'>
 			<div>{children}</div>
-			<div className='flex gap-4 w-full'>
-				<a href={liveHref} target='_blank' className='mt-8 w-full'>
+			<div className='flex gap-4 flex-wrap w-full mt-8'>
+				<a href={liveHref} target='_blank' className='grow'>
 					<Button className='w-full justify-center' icon={Radio}>
 						Live Site
 					</Button>
 				</a>
-				<a href={githubHref} target='_blank' className='mt-8 w-full'>
+				<a href={githubHref} target='_blank' className='grow'>
 					<Button
 						variant='muted'
 						className='w-full justify-center'
