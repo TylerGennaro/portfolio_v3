@@ -23,7 +23,7 @@ export default function Home() {
 						Powered by Me © {new Date().getFullYear()} •{' '}
 						<a
 							className='underline'
-							href='https://github.com/TGennnaro/portfolio_v3'
+							href='https://github.com/TylerGennaro/portfolio_v3'
 							target='_blank'
 						>
 							Source Code

@@ -9,7 +9,7 @@ export default function SeeMore() {
 				<Text size='lg' color='light'>
 					See more projects
 				</Text>
-				<a href='https://github.com/TGennnaro' target='_blank'>
+				<a href='https://github.com/TylerGennaro' target='_blank'>
 					<Button className='' variant='light' icon={Github}>
 						GitHub
 					</Button>

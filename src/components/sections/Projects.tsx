@@ -24,7 +24,7 @@ export default function Projects() {
 			<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
 				<Project
 					liveHref='https://pulsate.cloud'
-					githubHref='https://github.com/TGennnaro/pulsate'
+					githubHref='https://github.com/TylerGennaro/pulsate'
 				>
 					<ProjectImage
 						src={pulsateLight}
@@ -54,7 +54,7 @@ export default function Projects() {
 				</Project>
 				<Project
 					liveHref='https://devslist.vercel.app'
-					githubHref='https://github.com/TGennnaro/devslist'
+					githubHref='https://github.com/TylerGennaro/devslist'
 				>
 					<ProjectImage
 						src={devslistLight}
@@ -83,7 +83,7 @@ export default function Projects() {
 				</Project>
 				<Project
 					liveHref='https://commonwealthmetal.com'
-					githubHref='https://github.com/TGennnaro/common-metal'
+					githubHref='https://github.com/TylerGennaro/common-metal'
 				>
 					<ProjectImage src={commonwealth} alt='Commonwealth Metal' />
 					<ProjectTitle>Commonwealth Metal Company</ProjectTitle>
@@ -97,7 +97,7 @@ export default function Projects() {
 				</Project>
 				<Project
 					liveHref='https://coursehawk.vercel.app'
-					githubHref='https://github.com/TGennnaro/CourseHawk'
+					githubHref='https://github.com/TylerGennaro/CourseHawk'
 				>
 					<ProjectImage src={coursehawk} alt='CourseHawk' />
 					<ProjectTitle>CourseHawk</ProjectTitle>
