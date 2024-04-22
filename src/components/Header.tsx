@@ -42,7 +42,11 @@ export default function Header() {
 							<Linkedin />
 						</Button>
 					</a>
-					<a href='https://github.com/TGennnaro' target='_blank' title='GitHub'>
+					<a
+						href='https://github.com/TylerGennaro'
+						target='_blank'
+						title='GitHub'
+					>
 						<Button variant='icon'>
 							<Github />
 						</Button>
