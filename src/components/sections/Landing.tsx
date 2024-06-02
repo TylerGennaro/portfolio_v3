@@ -10,7 +10,7 @@ export default function Landing() {
 	return (
 		<>
 			<Meteors number={40} />
-			<section className='min-h-screen flex items-center px-4 sm:px-8 pb-32 md:pt-16'>
+			<section className='min-h-[100lvh] flex items-center px-4 sm:px-8 pb-32 md:pt-16'>
 				<div className='w-full'>
 					<div className='flex items-center justify-between flex-wrap-reverse gap-16'>
 						<div className='hidden sm:block'>
