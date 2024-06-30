@@ -12,19 +12,23 @@ export default function About() {
 				</div>
 				<ShadowHeading color='light'>About Me</ShadowHeading>
 				<Text className='max-w-screen-sm mt-8' color='lmuted'>
-					I am a student at Monmouth University in West Long Branch, NJ expected
-					to graduate in May 2024. I am pursuing a Bachelor&apos;s of Science in
-					Computer Science. I have <b>five</b> years experience in web
-					development, and <b>two</b> years experience using modern frameworks
-					such as React.js.
+					I am a recent graduate from Monmouth University in West Long Branch,
+					NJ with a Bachelor&apos;s of Science in Computer Science. I have{' '}
+					<b>six</b> years experience in web development and <b>three</b> years
+					experience using modern frameworks such as React.js and Next.js. I am
+					currently working full-time as a software engineering intern building
+					full-stack internal web applications using TypeScript, Next.js, and
+					MaterialUI.
 					<br />
 					<br />I am seeking an entry-level software development position to
-					utilize my problem-solving and collaborative skills to drive company
-					success. I am passionate about web development and am eager to
-					continue to learn and grow.
+					utilize my problem-solving and collaborative skills to provide
+					high-quality solutions in a fast-paced and dynamic environment. I am
+					passionate about web/application development and am eager to continue
+					learning to grow my skillset.
 					<br />
 					<br />
-					If you&apos;re interested in my work, please reach out to me at{' '}
+					If you&apos;re interested in my work and would like a copy of my
+					resume, please reach out to me at{' '}
 					<a href='mailto:tylergennaro10@gmail.com' className='underline'>
 						tylergennaro10@gmail.com
 					</a>

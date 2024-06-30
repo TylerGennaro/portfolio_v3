@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 const entries = [
 	'Web Developer',
 	'UI/UX Designer',
+	'Software Engineer',
 	'Programmer',
-	'Student',
 	'Soccer Player',
 	'Puppy Lover',
 	'Digital Sorcerer',
