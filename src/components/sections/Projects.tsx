@@ -55,6 +55,7 @@ export default function Projects() {
 				<Project
 					liveHref='https://devslist.vercel.app'
 					githubHref='https://github.com/TylerGennaro/devslist'
+					disableLiveSite
 				>
 					<ProjectImage
 						src={devslistLight}

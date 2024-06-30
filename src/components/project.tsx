@@ -8,17 +8,27 @@ export function Project({
 	children,
 	liveHref,
 	githubHref,
+	disableLiveSite,
 }: {
 	children: ReactNode;
 	liveHref?: string;
 	githubHref?: string;
+	disableLiveSite?: boolean;
 }) {
 	return (
 		<div className='w-full h-full p-4 border rounded-lg shadow-md [&:hover>img]:scale-[1.01] transition duration-300 flex flex-col justify-between'>
 			<div>{children}</div>
 			<div className='flex gap-4 flex-wrap w-full mt-8'>
-				<a href={liveHref} target='_blank' className='grow'>
-					<Button className='w-full justify-center' icon={Radio}>
+				<a
+					href={liveHref}
+					target='_blank'
+					className={`grow ${disableLiveSite ? 'pointer-events-none' : ''}`}
+				>
+					<Button
+						className='w-full justify-center'
+						icon={Radio}
+						disabled={disableLiveSite}
+					>
 						Live Site
 					</Button>
 				</a>
