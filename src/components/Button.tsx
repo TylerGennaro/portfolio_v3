@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge';
 import { VariantProps, tv } from 'tailwind-variants';
 
 const button = tv({
-	base: 'py-2 px-8 rounded-lg shadow-md text-foreground transition duration-300',
+	base: 'py-2 px-8 rounded-lg shadow-md text-foreground transition duration-300 disabled:opacity-50 disabled:pointer-events-none',
 	variants: {
 		variant: {
 			primary: 'bg-primary text-white hover:brightness-125',
