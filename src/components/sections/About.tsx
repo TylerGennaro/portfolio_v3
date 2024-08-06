@@ -13,18 +13,17 @@ export default function About() {
 				<ShadowHeading color='light'>About Me</ShadowHeading>
 				<Text className='max-w-screen-sm mt-8' color='lmuted'>
 					I am a recent graduate from Monmouth University in West Long Branch,
-					NJ with a Bachelor&apos;s of Science in Computer Science. I have{' '}
-					<b>six</b> years experience in web development and <b>three</b> years
-					experience using modern frameworks such as React.js and Next.js. I am
-					currently working full-time as a software engineering intern building
-					full-stack internal web applications using TypeScript, Next.js, and
-					MaterialUI.
+					NJ with a Bachelor of Science in Computer Science. I have <b>six</b>{' '}
+					years experience in web development and <b>three</b> years experience
+					using modern frameworks such as React.js and Next.js. I am currently
+					working full-time as a full-stack software developer building
+					electronic health records systems.
 					<br />
-					<br />I am seeking an entry-level software development position to
+					<br />I am open to entry-level software development positions to
 					utilize my problem-solving and collaborative skills to provide
 					high-quality solutions in a fast-paced and dynamic environment. I am
-					passionate about web/application development and am eager to continue
-					learning to grow my skillset.
+					passionate about software development and am eager to continue
+					learning and grow my skillset.
 					<br />
 					<br />
 					If you&apos;re interested in my work and would like a copy of my

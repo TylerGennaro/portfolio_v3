@@ -8,8 +8,10 @@ import Header from '@/components/Header';
 const inter = Inter({ subsets: ['latin'] });
 const openSans = Open_Sans({ subsets: ['latin'] });
 
-const description =
-	'My name is Tyler, I am a full-stack web developer currently pursuing a B.S. in Computer Science and expected to graduate in May 2024. I have a passion for creating and developing web applications that are both functional and visually appealing.';
+const description = `I am a recent graduate from Monmouth University in West Long Branch,
+					NJ with a Bachelor of Science in Computer Science. I have
+					six years experience in web development and three years
+					experience using modern frameworks such as React.js and Next.js.`;
 
 export const metadata: Metadata = {
 	title: 'Portfolio - Tyler Gennaro',
