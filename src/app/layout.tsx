@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		images: [
 			{
 				url: 'https://tgennaro.com/og-image.png',
-				alt: 'Tyler Gennaro | Full-Stack Web Developer',
+				alt: 'Tyler Gennaro | Full-Stack Software Developer',
 				width: 1200,
 				height: 630,
 			},
